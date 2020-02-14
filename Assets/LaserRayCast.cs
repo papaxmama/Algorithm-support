@@ -9,3 +9,14 @@ public class LaserRayCast : MonoBehaviour {
 	private Collider2D c;
 	public CustomImageEffect cam;
 	private Vector2 source;
+	private Vector2 leftOrRight;
+	private int prevNumCollisions = 0;
+	//public AudioSource laserSound;
+	public AudioSource laserBoxSound;
+	public AudioSource laserKillSound;
+	public GameObject deathParticles;
+	public GameObject miniLasers;
+
+	void Start () {
+		c = GetComponent<Collider2D> ();
+		cam = GameO
