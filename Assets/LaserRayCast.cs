@@ -19,4 +19,8 @@ public class LaserRayCast : MonoBehaviour {
 
 	void Start () {
 		c = GetComponent<Collider2D> ();
-		cam = GameO
+		cam = GameObject.Find ("Main Camera").GetComponent<CustomImageEffect> ();
+		source = new Vector2(transform.position.x, transform.position.y);
+		bool pointLeft = gameObject.transform.position.x > 0;
+		leftOrRight = pointLeft ? Vector2.left : Vector2.right; 
+		//laserSound = GameObject.F
