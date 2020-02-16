@@ -23,4 +23,9 @@ public class LaserRayCast : MonoBehaviour {
 		source = new Vector2(transform.position.x, transform.position.y);
 		bool pointLeft = gameObject.transform.position.x > 0;
 		leftOrRight = pointLeft ? Vector2.left : Vector2.right; 
-		//laserSound = GameObject.F
+		//laserSound = GameObject.Find ("LaserHolder").GetComponent<AudioSource> ();
+		laserBoxSound = GameObject.Find ("LaserBoxHolder").GetComponent<AudioSource> ();
+		laserKillSound = GameObject.Find ("LaserKillHolder").GetComponent<AudioSource> ();
+
+		//laserSound.clip.LoadAudioData ();
+		laserBoxSound.clip.Lo
