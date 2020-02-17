@@ -28,4 +28,14 @@ public class LaserRayCast : MonoBehaviour {
 		laserKillSound = GameObject.Find ("LaserKillHolder").GetComponent<AudioSource> ();
 
 		//laserSound.clip.LoadAudioData ();
-		laserBoxSound.clip.Lo
+		laserBoxSound.clip.LoadAudioData ();
+		laserKillSound.clip.LoadAudioData ();
+		laserBoxSound.loop = true;
+//		laserSound.loop = true;
+//		laserSound.Play ();
+	}
+	 
+	// Update is called once per frame
+	void Update () {
+		RaycastHit2D[] collisions = new RaycastHit2D[1];
+		int numCollisions = c.Raycast (leftOrRight, collisions, Ma
