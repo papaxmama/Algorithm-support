@@ -38,4 +38,12 @@ public class LaserRayCast : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 		RaycastHit2D[] collisions = new RaycastHit2D[1];
-		int numCollisions = c.Raycast (leftOrRight, collisions, Ma
+		int numCollisions = c.Raycast (leftOrRight, collisions, Mathf.Infinity);
+
+		if (numCollisions == 1) {
+			//beam hits a box (or player)
+			Vector2 target = collisions [0].point;
+			cam.lasers.Add (new Vector3 (source.x, target.x, source.y));
+
+			if (collisions [0].collider.gameObject.tag == "Player") {
+				GameObject particle2 = Instantiate (deathParticles, new V
