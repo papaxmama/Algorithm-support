@@ -46,4 +46,12 @@ public class LaserRayCast : MonoBehaviour {
 			cam.lasers.Add (new Vector3 (source.x, target.x, source.y));
 
 			if (collisions [0].collider.gameObject.tag == "Player") {
-				GameObject particle2 = Instantiate (deathParticles, new V
+				GameObject particle2 = Instantiate (deathParticles, new Vector3 (target.x, target.y, 0f), Quaternion.identity);
+				Destroy (particle2, .2f);
+				collisions [0].collider.gameObject.GetComponent<Rigidbody2D> ().bodyType = RigidbodyType2D.Static;
+
+				if (prevNumCollisions < numCollisions) {
+					laserKillSound.Play ();
+				}
+
+				Invoke ("restart"
