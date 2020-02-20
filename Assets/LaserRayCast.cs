@@ -57,4 +57,17 @@ public class LaserRayCast : MonoBehaviour {
 				Invoke ("restart", 0.5f);
 			} else if (collisions[0].collider.gameObject.tag == "Box") {
 				Vector3 cameraView = cam.gameObject.GetComponent<Camera> ().WorldToViewportPoint (new Vector3 (collisions [0].point.x, collisions [0].point.y, 0f));
-				if (cameraView.x > 0 && cameraView.x < 1 && cameraView.y 
+				if (cameraView.x > 0 && cameraView.x < 1 && cameraView.y > 0 && cameraView.y < 1) {
+					if (prevNumCollisions < numCollisions) {
+						laserBoxSound.Play ();
+					}
+				} else {
+					laserBoxSound.Pause ();
+				}
+			}
+
+			GameObject particle = Instantiate (miniLasers, new Vector3 (target.x, target.y, 0f), Quaternion.identity);
+			Destroy (particle, .2f);
+
+		} else {
+			//laser
