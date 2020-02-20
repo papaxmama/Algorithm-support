@@ -70,4 +70,16 @@ public class LaserRayCast : MonoBehaviour {
 			Destroy (particle, .2f);
 
 		} else {
-			//laser
+			//laserBoxSound.Pause ();
+
+			//beam extends out forever
+			cam.lasers.Add (new Vector3 (source.x, leftOrRight.x * 10000, source.y));
+		}
+
+		prevNumCollisions = numCollisions;
+	}
+
+	void restart(){
+		SceneManager.LoadScene ("StartingScreen");
+	}
+}
