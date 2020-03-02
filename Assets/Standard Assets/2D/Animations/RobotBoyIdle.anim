@@ -58,4 +58,10 @@ AnimationClip:
     - time: .791666687
       value: {fileID: 21300038, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
     - time: .833333313
-      value: {fileID: 21300040, gu
+      value: {fileID: 21300040, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+    - time: .875
+      value: {fileID: 21300042, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+    - time: .916666687
+      value: {fileID: 21300044, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+    - time: .958333313
+      value: {fileID: 21300046, 
