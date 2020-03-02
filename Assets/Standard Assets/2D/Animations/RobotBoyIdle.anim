@@ -76,4 +76,17 @@ AnimationClip:
     - time: 1.16666663
       value: {fileID: 21300056, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
     - time: 1.20833337
-      value: {fileID: 21300058, guid: 8fb98a6035269e64a9
+      value: {fileID: 21300058, guid: 8fb98a6035269e64a998f9b56828fc4f, type: 3}
+    attribute: m_Sprite
+    path: 
+    classID: 212
+    script: {fileID: 0}
+  m_SampleRate: 24
+  m_WrapMode: 0
+  m_Bounds:
+    m_Center: {x: 0, y: 0, z: 0}
+    m_Extent: {x: 0, y: 0, z: 0}
+  m_ClipBindingConstant:
+    genericBindings:
+    - path: 0
+      attribute
