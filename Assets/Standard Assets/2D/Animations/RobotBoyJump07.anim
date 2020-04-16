@@ -58,4 +58,5 @@ AnimationClip:
   m_EditorCurves: []
   m_EulerEditorCurves: []
   m_HasGenericRootTransform: 0
-  m_Ge
+  m_GenerateMotionCurves: 0
+  m_Events: []
