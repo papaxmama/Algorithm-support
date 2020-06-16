@@ -640,4 +640,18 @@ AnimatorState:
   m_Tag: 
 --- !u!1102 &110272440
 AnimatorState:
-  se
+  serializedVersion: 3
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name: Walk
+  m_Speed: 1
+  m_CycleOffset: 0
+  m_Transitions:
+  - {fileID: 110100000}
+  - {fileID: 110151961}
+  - {fileID: 110102070}
+  m_Behaviours: []
+  m_Position: {x: 144, y: 132, z: 0}
+  m_IKOnFeet: 0
+  m_M
