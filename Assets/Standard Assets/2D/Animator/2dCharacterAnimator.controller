@@ -614,4 +614,16 @@ AnimatorState:
   - {fileID: 110107083}
   - {fileID: 110193154}
   - {fileID: 110100562}
- 
+  m_Behaviours: []
+  m_Position: {x: -180, y: -36, z: 0}
+  m_IKOnFeet: 0
+  m_Mirror: 0
+  m_Motion: {fileID: 7400000, guid: 19bf9c5d4c01a864baffb3ac0dc54a9b, type: 2}
+  m_Tag: 
+--- !u!1102 &110262872
+AnimatorState:
+  serializedVersion: 3
+  m_ObjectHideFlags: 3
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_Name
