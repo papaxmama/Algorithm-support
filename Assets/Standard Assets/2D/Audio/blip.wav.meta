@@ -1,1 +1,13 @@
-fi
+fileFormatVersion: 2
+guid: f76be4090f2a0c94ba9ebd06c06c7d8a
+timeCreated: 1488053618
+licenseType: Free
+AudioImporter:
+  serializedVersion: 6
+  defaultSettings:
+    loadType: 0
+    sampleRateSetting: 0
+    sampleRateOverride: 44100
+    compressionFormat: 1
+    quality: 1
+    con
