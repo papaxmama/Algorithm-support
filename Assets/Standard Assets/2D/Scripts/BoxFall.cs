@@ -24,4 +24,9 @@ namespace FallingBoxes
 
 		private void OnCollisionExit2D (Collision2D coll)
 		{
-			if (coll.gameObject.t
+			if (coll.gameObject.tag == "Player") {
+				this.gameObject.GetComponent<Rigidbody2D> ().velocity = baseVelocity;
+			}
+		}
+	}
+}
