@@ -12,4 +12,16 @@ namespace FallingBoxes
 
 		public void Start ()
 		{
-			this.gameObject.GetComponent<Rigidbody
+			this.gameObject.GetComponent<Rigidbody2D> ().velocity = baseVelocity;
+		}
+
+		private void OnCollisionEnter2D (Collision2D coll)
+		{
+			if (coll.gameObject.tag == "Player") {
+				this.gameObject.GetComponent<Rigidbody2D> ().velocity = playerVelocity;
+			}
+		}
+
+		private void OnCollisionExit2D (Collision2D coll)
+		{
+			if (coll.gameObject.t
