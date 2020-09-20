@@ -40,3 +40,13 @@ namespace UnityStandardAssets._2D
         private void Update()
         {
             TrackPlayer();
+        }
+
+
+        private void TrackPlayer()
+        {
+            // By default the target x and y coordinates of the camera are it's current x and y coordinates.
+            float targetX = transform.position.x;
+            float targetY = transform.position.y;
+
+            // If the player has moved beyond the x mar
