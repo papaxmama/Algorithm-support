@@ -30,4 +30,13 @@ namespace UnityStandardAssets._2D
         }
 
 
-        pri
+        private bool CheckYMargin()
+        {
+            // Returns true if the distance between the camera and the player in the y axis is greater than the y margin.
+            return Mathf.Abs(transform.position.y - m_Player.position.y) > yMargin;
+        }
+
+
+        private void Update()
+        {
+            TrackPlayer();
