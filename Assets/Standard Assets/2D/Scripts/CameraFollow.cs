@@ -19,4 +19,15 @@ namespace UnityStandardAssets._2D
         private void Awake()
         {
             // Setting up the reference.
-            m_Player = GameObject.FindGameObjectWithTag("Play
+            m_Player = GameObject.FindGameObjectWithTag("Player").transform;
+        }
+
+
+        private bool CheckXMargin()
+        {
+            // Returns true if the distance between the camera and the player in the x axis is greater than the x margin.
+            return Mathf.Abs(transform.position.x - m_Player.position.x) > xMargin;
+        }
+
+
+        pri
