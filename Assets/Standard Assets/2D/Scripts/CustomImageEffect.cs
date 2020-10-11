@@ -35,4 +35,9 @@ public class CustomImageEffect : MonoBehaviour
 		Vector3 one = myCamera.WorldToScreenPoint (new Vector3 (x1, y, 0));
 		Vector3 two = myCamera.WorldToScreenPoint (new Vector3 (x2, y, 0));
 		Vector4 ray = new Vector4 (one.x / myCamera.pixelWidth,
-			        
+			             one.y / myCamera.pixelHeight,
+			             two.x / myCamera.pixelWidth,
+			             two.y / myCamera.pixelHeight);
+		Shader.SetGlobalVector ("_Ray", ray);
+	}
+}
