@@ -27,4 +27,12 @@ public class CustomImageEffect : MonoBehaviour
 	public void Start ()
 	{
 		lasers = new List<Vector3> ();
-		myCamera = gameObject.
+		myCamera = gameObject.GetComponent<Camera> ();
+	}
+
+	public void DrawLine (float x1, float x2, float y)
+	{
+		Vector3 one = myCamera.WorldToScreenPoint (new Vector3 (x1, y, 0));
+		Vector3 two = myCamera.WorldToScreenPoint (new Vector3 (x2, y, 0));
+		Vector4 ray = new Vector4 (one.x / myCamera.pixelWidth,
+			        
