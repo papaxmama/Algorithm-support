@@ -41,4 +41,12 @@ namespace FallingBoxes
 				highestDifficulty = difficulty;
 				numLasers = (int)Mathf.Ceil ((difficulty / 10f / (1f + difficulty / 10f)) * maxTotalLasers); //  x / (1 + x)  --> 1/11, 1/6, 3/7, 1/2, 5/9, 3/5, 2/3, 5/7, 3/4, 7/9
 				becomeMotivated();
-	
+			}
+
+			if (Time.frameCount % boxSpawnPeriodicity == 0) {
+				int boxNum = Time.frameCount / boxSpawnPeriodicity;
+				box.name = "box" + boxNum.ToString ();
+				int randomWidth = Random.Range (0, 5);
+				int randomHeight = Random.Range (0, 5); 
+				float boxX = Random.Range (-boxDeltaX, boxDeltaX);
+				float boxY
