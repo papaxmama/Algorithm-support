@@ -51,4 +51,11 @@ namespace FallingBoxes
 				float boxX = Random.Range (-boxDeltaX, boxDeltaX);
 				float boxY = Random.Range (boxSpawnOffset - boxSpawnVariance, boxSpawnOffset + boxSpawnVariance) + character.transform.position.y;
 				GameObject newBox = Instantiate (box, new Vector3 (boxX, boxY, 0f), Quaternion.identity, gameManager);
-				// newBox.GetComponent<Rigidbody2D> ().gravityScale = Random.Range (minGravity, ma
+				// newBox.GetComponent<Rigidbody2D> ().gravityScale = Random.Range (minGravity, maxGravity);
+				newBox.transform.localScale += new Vector3 (randomWidth, randomHeight, 0f);
+				newBox.GetComponent<Uncollide> ().mainCharacter = character.GetComponent<MainCharacter> ();
+			}
+
+			if (maxHeightReached < character.transform.position.y) {
+				maxHeightReached = character.transform.position.y;
+		
