@@ -49,4 +49,6 @@ namespace FallingBoxes
 				int randomWidth = Random.Range (0, 5);
 				int randomHeight = Random.Range (0, 5); 
 				float boxX = Random.Range (-boxDeltaX, boxDeltaX);
-				float boxY
+				float boxY = Random.Range (boxSpawnOffset - boxSpawnVariance, boxSpawnOffset + boxSpawnVariance) + character.transform.position.y;
+				GameObject newBox = Instantiate (box, new Vector3 (boxX, boxY, 0f), Quaternion.identity, gameManager);
+				// newBox.GetComponent<Rigidbody2D> ().gravityScale = Random.Range (minGravity, ma
