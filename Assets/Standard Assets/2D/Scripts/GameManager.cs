@@ -58,4 +58,10 @@ namespace FallingBoxes
 
 			if (maxHeightReached < character.transform.position.y) {
 				maxHeightReached = character.transform.position.y;
-		
+			}
+
+			Text highScore = GameObject.Find ("HighScore").GetComponent<Text> ();
+			highScore.text = "High Score: " + Mathf.Round(maxHeightReached).ToString ();
+
+			Text currentScore = GameObject.Find ("CurrentScore").GetComponent<Text> ();
+			currentScore.text = "Current Score: " + Mathf.Round(character.transform.position.y).T
