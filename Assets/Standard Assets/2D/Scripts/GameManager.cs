@@ -64,4 +64,8 @@ namespace FallingBoxes
 			highScore.text = "High Score: " + Mathf.Round(maxHeightReached).ToString ();
 
 			Text currentScore = GameObject.Find ("CurrentScore").GetComponent<Text> ();
-			currentScore.text = "Current Score: " + Mathf.Round(character.transform.position.y).T
+			currentScore.text = "Current Score: " + Mathf.Round(character.transform.position.y).ToString ();
+
+			if ((Time.frameCount % laserSpawnPeriodicity == 0) && numLasers > 0) {
+				//GameObject newLaser = Instantiate(laser, new Vector3(laserDeltaX * (Mathf.Sign(Random.Range(-1,1))), character.transform.position.y + boxSpawnOffset, 0f), Quaternion.identity, gameManager);
+				Instantiate (laser
