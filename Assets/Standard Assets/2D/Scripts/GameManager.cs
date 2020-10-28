@@ -68,4 +68,14 @@ namespace FallingBoxes
 
 			if ((Time.frameCount % laserSpawnPeriodicity == 0) && numLasers > 0) {
 				//GameObject newLaser = Instantiate(laser, new Vector3(laserDeltaX * (Mathf.Sign(Random.Range(-1,1))), character.transform.position.y + boxSpawnOffset, 0f), Quaternion.identity, gameManager);
-				Instantiate (laser
+				Instantiate (laser, new Vector3 (laserDeltaX * (Mathf.Sign (Random.Range (-1, 1))), character.transform.position.y + boxSpawnOffset, 0f), Quaternion.identity, gameManager);
+				numLasers--;
+			}
+			SaveScore ();
+		}
+
+		void InitGame ()
+		{
+
+			if (PlayerPrefs.HasKey ("highscore")) {
+				maxHeightReached = P
