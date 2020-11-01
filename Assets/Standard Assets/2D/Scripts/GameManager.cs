@@ -83,4 +83,7 @@ namespace FallingBoxes
 			gameManager = new GameObject ("Game").transform;
 
 			GameObject startingPlatform = Instantiate (platformPiece, new Vector3 (-15, 3.866f, 0f), Quaternion.identity, gameManager) as GameObject;
-			GameObject startingCeiling = Instantiate (platformPiece, new Vector3 (-14.376f, -0.634f, 0f),
+			GameObject startingCeiling = Instantiate (platformPiece, new Vector3 (-14.376f, -0.634f, 0f), Quaternion.Euler (new Vector3 (0, 0, 90)), gameManager) as GameObject;
+			GameObject startingNookWall = Instantiate (platformPiece, new Vector3 (-15, -0.634f, 0f), Quaternion.identity, gameManager) as GameObject;
+
+			startingCeiling.GetComponent<Uncollide> ().mainCharacter = character.GetComponent<MainCharacter> ()
