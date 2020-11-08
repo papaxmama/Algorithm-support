@@ -92,4 +92,14 @@ namespace FallingBoxes
 
 			Destroy (startingPlatform, 30f);
 			Destroy (startingCeiling, 30f);
-			Destroy (s
+			Destroy (startingNookWall, 30f);
+
+		}
+
+		void SaveScore ()
+		{
+			PlayerPrefs.SetFloat ("highscore", Mathf.Round(maxHeightReached));
+		}
+
+		void becomeMotivated() {
+			GameObject newMotivation = Instantiate (motivationArrow, new Vector3 (0f, character.transform.position.y + boxSpawnOffset, 0f), Quaternion.identity, gameMan
