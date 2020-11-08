@@ -102,4 +102,9 @@ namespace FallingBoxes
 		}
 
 		void becomeMotivated() {
-			GameObject newMotivation = Instantiate (motivationArrow, new Vector3 (0f, character.transform.position.y + boxSpawnOffset, 0f), Quaternion.identity, gameMan
+			GameObject newMotivation = Instantiate (motivationArrow, new Vector3 (0f, character.transform.position.y + boxSpawnOffset, 0f), Quaternion.identity, gameManager) as GameObject;
+
+			newMotivation.layer = 10;
+		}
+	}
+}
