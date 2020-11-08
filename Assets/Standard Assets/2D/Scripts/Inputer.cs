@@ -24,4 +24,16 @@ namespace FallingBoxes
 				m_Jump = CrossPlatformInputManager.GetButtonDown ("Jump");
 			}
 
-			if (CrossPlatformInputManager.GetButto
+			if (CrossPlatformInputManager.GetButtonDown("Cancel")) {
+				Time.timeScale = Time.timeScale == 0f ? 1f : 0f;
+			}
+		}
+
+
+		private void FixedUpdate ()
+		{
+			float h = CrossPlatformInputManager.GetAxisRaw ("Horizontal");
+			float v = CrossPlatformInputManager.GetAxisRaw ("Vertical");
+			// Pass all parameters to the character control script.
+			m_Character.Move (h, v, m_Jump);
+			m_Ju
