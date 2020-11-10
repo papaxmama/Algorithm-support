@@ -36,4 +36,8 @@ namespace FallingBoxes
 			float v = CrossPlatformInputManager.GetAxisRaw ("Vertical");
 			// Pass all parameters to the character control script.
 			m_Character.Move (h, v, m_Jump);
-			m_Ju
+			m_Jump = false;
+		}
+
+	}
+}
