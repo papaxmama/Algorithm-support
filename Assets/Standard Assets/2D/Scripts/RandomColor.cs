@@ -18,4 +18,16 @@ public class RandomColor : MonoBehaviour {
 	       UnityEngine.Random.value,
 	       UnityEngine.Random.value);
     }
-    private void setRGB(float r, fl
+    private void setRGB(float r, float g, float b){
+	material.SetFloat("_R", r);
+	material.SetFloat("_G", g);
+	material.SetFloat("_B", b);
+    }
+
+    // Update is called once per frame
+    void Update () {
+	if(Time.frameCount % 100 == 0){
+	    // setRandomRGB();
+	}
+    }
+}
