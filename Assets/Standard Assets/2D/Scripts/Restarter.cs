@@ -11,4 +11,8 @@ namespace UnityStandardAssets._2D
 			if (other.tag == "Player") {
 				SceneManager.LoadScene ("StartingScreen");
 			} else if (other.tag == "Box") {
-				Destroy
+				Destroy (other.gameObject, 1f);
+			}
+        }
+    }
+}
