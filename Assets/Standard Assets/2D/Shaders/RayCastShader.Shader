@@ -56,4 +56,13 @@ Shader "Hidden/NewImageEffectShader"
 				float _Alpha = min(max(0, (1 - abs(_Ray.y - i.uv.y) / _Range)),
 				                   max(0, sign(i.uv.x - _Ray.x) * sign(_Ray.z - i.uv.x)));
 				float white = min(max(0, 1 - sign((abs(_Ray.y - i.uv.y) / _Range) - 0.07)),
-				      	          max(
+				      	          max(0, sign(i.uv.x - _Ray.x) * sign(_Ray.z - i.uv.x)));
+				float4 col = float4(_R, _G, _B, 1) * _Alpha;
+				col += tex2D(_MainTex, i.uv) * (1 - _Alpha);
+				col += float4(1,1,1,1) * white;
+				return col;
+			}
+			ENDCG
+		}
+	}
+}
