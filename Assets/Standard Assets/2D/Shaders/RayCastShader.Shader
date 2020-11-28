@@ -47,4 +47,13 @@ Shader "Hidden/NewImageEffectShader"
 			sampler2D _MainTex;
 			float _R;
 			float _G;
-			
+			float _B;
+			float _Range;
+			float4 _Ray;
+
+			float4 frag (v2f i) : SV_Target
+			{
+				float _Alpha = min(max(0, (1 - abs(_Ray.y - i.uv.y) / _Range)),
+				                   max(0, sign(i.uv.x - _Ray.x) * sign(_Ray.z - i.uv.x)));
+				float white = min(max(0, 1 - sign((abs(_Ray.y - i.uv.y) / _Range) - 0.07)),
+				      	          max(
