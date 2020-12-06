@@ -52,4 +52,17 @@ TextureImporter:
     compressionQuality: 50
   - buildTarget: Android
     maxTextureSize: 512
-    textureFo
+    textureFormat: -1
+    compressionQuality: 50
+  - buildTarget: BlackBerry
+    maxTextureSize: 512
+    textureFormat: -1
+    compressionQuality: 50
+  - buildTarget: FlashPlayer
+    maxTextureSize: 1024
+    textureFormat: -1
+    compressionQuality: 50
+  - buildTarget: WP8
+    maxTextureSize: 512
+    textureFormat: -1
+    compressionQuality:
