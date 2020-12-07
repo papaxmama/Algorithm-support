@@ -65,4 +65,9 @@ TextureImporter:
   - buildTarget: WP8
     maxTextureSize: 512
     textureFormat: -1
-    compressionQuality:
+    compressionQuality: 50
+  spriteSheet:
+    sprites: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
