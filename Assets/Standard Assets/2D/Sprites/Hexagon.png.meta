@@ -43,4 +43,16 @@ TextureImporter:
   spritePixelsToUnits: 4
   alphaUsage: 1
   alphaIsTransparency: 1
-  spriteT
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    textureFormat: 4
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedComp
