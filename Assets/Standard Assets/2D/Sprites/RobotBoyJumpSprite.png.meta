@@ -21,4 +21,16 @@ TextureImporter:
     21300032: RobotBoyJump16
     21300034: RobotBoyJump17
     21300036: RobotBoyJump18
-    21300038: 
+    21300038: RobotBoyJump19
+    21300040: RobotBoyJump20
+    21300042: RobotBoyJump21
+    21300044: RobotBoyJump22
+    21300046: RobotBoyJump23
+    21300048: RobotBoyJump24
+    21300050: RobotBoyJump25
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    linearTexture: 0
+    corr
