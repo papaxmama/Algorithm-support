@@ -76,4 +76,17 @@ TextureImporter:
     textureFormat: -2
     compressionQuality: 100
   - buildTarget: Android
-    maxTextureSize: 102
+    maxTextureSize: 1024
+    textureFormat: -1
+    compressionQuality: 50
+  - buildTarget: BlackBerry
+    maxTextureSize: 1024
+    textureFormat: -1
+    compressionQuality: 50
+  - buildTarget: WP8
+    maxTextureSize: 1024
+    textureFormat: -1
+    compressionQuality: 50
+  spriteSheet:
+    sprites:
+    - name: RobotBoyJump00
