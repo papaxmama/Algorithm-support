@@ -298,4 +298,17 @@ TextureImporter:
         height: 275
       alignment: 0
       pivot: {x: .5, y: .5}
-      bo
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RobotBoyJump21
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 948
+        width: 275
+        height: 275
+      alignment: 0
+      pivot: {x: .5, y: .5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: RobotBoyJump22
+      rect:
+        seria
