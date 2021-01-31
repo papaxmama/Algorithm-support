@@ -1,33 +1,32 @@
+
 fileFormatVersion: 2
-guid: 9e1a2edf6149977479db158e4fbf9671
+guid: fc67a9002ed4034419f91d0d85bd6b24
 TextureImporter:
   fileIDToRecycleName:
-    21300000: RobotBoyJump00
-    21300002: RobotBoyJump01
-    21300004: RobotBoyJump02
-    21300006: RobotBoyJump03
-    21300008: RobotBoyJump04
-    21300010: RobotBoyJump05
-    21300012: RobotBoyJump06
-    21300014: RobotBoyJump07
-    21300016: RobotBoyJump08
-    21300018: RobotBoyJump09
-    21300020: RobotBoyJump10
-    21300022: RobotBoyJump11
-    21300024: RobotBoyJump12
-    21300026: RobotBoyJump13
-    21300028: RobotBoyJump14
-    21300030: RobotBoyJump15
-    21300032: RobotBoyJump16
-    21300034: RobotBoyJump17
-    21300036: RobotBoyJump18
-    21300038: RobotBoyJump19
-    21300040: RobotBoyJump20
-    21300042: RobotBoyJump21
-    21300044: RobotBoyJump22
-    21300046: RobotBoyJump23
-    21300048: RobotBoyJump24
-    21300050: RobotBoyJump25
+    21300000: RobotBoyRoll00
+    21300002: RobotBoyRoll01
+    21300004: RobotBoyRoll02
+    21300006: RobotBoyRoll03
+    21300008: RobotBoyRoll04
+    21300010: RobotBoyRoll05
+    21300012: RobotBoyRoll06
+    21300014: RobotBoyRoll07
+    21300016: RobotBoyRoll08
+    21300018: RobotBoyRoll09
+    21300020: RobotBoyRoll10
+    21300022: RobotBoyRoll11
+    21300024: RobotBoyRoll12
+    21300026: RobotBoyRoll13
+    21300028: RobotBoyRoll14
+    21300030: RobotBoyRoll15
+    21300032: RobotBoyRoll16
+    21300034: RobotBoyRoll17
+    21300036: RobotBoyRoll18
+    21300038: RobotBoyRoll19
+    21300040: RobotBoyRoll20
+    21300042: RobotBoyRoll21
+    21300044: RobotBoyRoll22
+    21300046: RobotBoyRoll23
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -51,7 +50,7 @@ TextureImporter:
   cubemapConvolutionExponent: 1.5
   seamlessCubemap: 0
   textureFormat: -1
-  maxTextureSize: 2048
+  maxTextureSize: 1024
   textureSettings:
     filterMode: -1
     aniso: 1
@@ -89,7 +88,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: RobotBoyJump00
+    - name: RobotBoyRoll00
       rect:
         serializedVersion: 2
         x: 0
@@ -99,7 +98,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump01
+    - name: RobotBoyRoll01
       rect:
         serializedVersion: 2
         x: 275
@@ -109,7 +108,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump02
+    - name: RobotBoyRoll02
       rect:
         serializedVersion: 2
         x: 550
@@ -119,7 +118,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump03
+    - name: RobotBoyRoll03
       rect:
         serializedVersion: 2
         x: 825
@@ -129,7 +128,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump04
+    - name: RobotBoyRoll04
       rect:
         serializedVersion: 2
         x: 1100
@@ -139,7 +138,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump05
+    - name: RobotBoyRoll05
       rect:
         serializedVersion: 2
         x: 1375
@@ -149,7 +148,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump06
+    - name: RobotBoyRoll06
       rect:
         serializedVersion: 2
         x: 1650
@@ -159,7 +158,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump07
+    - name: RobotBoyRoll07
       rect:
         serializedVersion: 2
         x: 0
@@ -169,7 +168,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump08
+    - name: RobotBoyRoll08
       rect:
         serializedVersion: 2
         x: 275
@@ -179,7 +178,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump09
+    - name: RobotBoyRoll09
       rect:
         serializedVersion: 2
         x: 550
@@ -189,7 +188,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump10
+    - name: RobotBoyRoll10
       rect:
         serializedVersion: 2
         x: 825
@@ -199,7 +198,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump11
+    - name: RobotBoyRoll11
       rect:
         serializedVersion: 2
         x: 1100
@@ -209,7 +208,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump12
+    - name: RobotBoyRoll12
       rect:
         serializedVersion: 2
         x: 1375
@@ -219,17 +218,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump13
+    - name: RobotBoyRoll13
       rect:
         serializedVersion: 2
-        x: 1650
-        y: 1498
+        x: 1644
+        y: 1500
         width: 275
         height: 275
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump14
+    - name: RobotBoyRoll14
       rect:
         serializedVersion: 2
         x: 0
@@ -239,7 +238,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump15
+    - name: RobotBoyRoll15
       rect:
         serializedVersion: 2
         x: 275
@@ -249,7 +248,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump16
+    - name: RobotBoyRoll16
       rect:
         serializedVersion: 2
         x: 550
@@ -259,7 +258,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump17
+    - name: RobotBoyRoll17
       rect:
         serializedVersion: 2
         x: 825
@@ -269,7 +268,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump18
+    - name: RobotBoyRoll18
       rect:
         serializedVersion: 2
         x: 1100
@@ -279,76 +278,4 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump19
-      rect:
-        serializedVersion: 2
-        x: 1375
-        y: 1223
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump20
-      rect:
-        serializedVersion: 2
-        x: 1650
-        y: 1223
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump21
-      rect:
-        serializedVersion: 2
-        x: 0
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump22
-      rect:
-        serializedVersion: 2
-        x: 275
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump23
-      rect:
-        serializedVersion: 2
-        x: 550
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump24
-      rect:
-        serializedVersion: 2
-        x: 825
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyJump25
-      rect:
-        serializedVersion: 2
-        x: 1100
-        y: 948
-        width: 275
-        height: 275
-      alignment: 0
-      pivot: {x: .5, y: .5}
-      border: {x: 0, y: 0, z: 0, w: 0}
-  spritePackingTag: 
-  userData: 
-  assetBundleName: 
+    - name: RobotBoyRoll19
