@@ -1,24 +1,24 @@
 
 fileFormatVersion: 2
-guid: 803baf1ea73913f46b25e07d0a79df22
+guid: feda0c18015b3284cabbc0da85254f9a
 TextureImporter:
   fileIDToRecycleName:
-    21300000: RobotBoyRun00
-    21300002: RobotBoyRun01
-    21300004: RobotBoyRun02
-    21300006: RobotBoyRun03
-    21300008: RobotBoyRun04
-    21300010: RobotBoyRun05
-    21300012: RobotBoyRun06
-    21300014: RobotBoyRun07
-    21300016: RobotBoyRun08
-    21300018: RobotBoyRun09
-    21300020: RobotBoyRun10
-    21300022: RobotBoyRun11
-    21300024: RobotBoyRun12
-    21300026: RobotBoyRun13
-    21300028: RobotBoyRun14
-    21300030: RobotBoyRun15
+    21300000: RobotBoyWalk00
+    21300002: RobotBoyWalk01
+    21300004: RobotBoyWalk02
+    21300006: RobotBoyWalk03
+    21300008: RobotBoyWalk04
+    21300010: RobotBoyWalk05
+    21300012: RobotBoyWalk06
+    21300014: RobotBoyWalk07
+    21300016: RobotBoyWalk08
+    21300018: RobotBoyWalk09
+    21300020: RobotBoyWalk10
+    21300022: RobotBoyWalk11
+    21300024: RobotBoyWalk12
+    21300026: RobotBoyWalk13
+    21300028: RobotBoyWalk14
+    21300030: RobotBoyWalk15
   serializedVersion: 2
   mipmaps:
     mipMapMode: 0
@@ -80,7 +80,7 @@ TextureImporter:
     compressionQuality: 50
   spriteSheet:
     sprites:
-    - name: RobotBoyRun00
+    - name: RobotBoyWalk00
       rect:
         serializedVersion: 2
         x: 0
@@ -90,7 +90,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun01
+    - name: RobotBoyWalk01
       rect:
         serializedVersion: 2
         x: 275
@@ -100,7 +100,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun02
+    - name: RobotBoyWalk02
       rect:
         serializedVersion: 2
         x: 550
@@ -110,7 +110,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun03
+    - name: RobotBoyWalk03
       rect:
         serializedVersion: 2
         x: 825
@@ -120,7 +120,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun04
+    - name: RobotBoyWalk04
       rect:
         serializedVersion: 2
         x: 1100
@@ -130,7 +130,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun05
+    - name: RobotBoyWalk05
       rect:
         serializedVersion: 2
         x: 1375
@@ -140,7 +140,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun06
+    - name: RobotBoyWalk06
       rect:
         serializedVersion: 2
         x: 1650
@@ -150,7 +150,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun07
+    - name: RobotBoyWalk07
       rect:
         serializedVersion: 2
         x: 0
@@ -160,7 +160,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun08
+    - name: RobotBoyWalk08
       rect:
         serializedVersion: 2
         x: 275
@@ -170,7 +170,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun09
+    - name: RobotBoyWalk09
       rect:
         serializedVersion: 2
         x: 550
@@ -180,7 +180,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun10
+    - name: RobotBoyWalk10
       rect:
         serializedVersion: 2
         x: 825
@@ -190,7 +190,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun11
+    - name: RobotBoyWalk11
       rect:
         serializedVersion: 2
         x: 1100
@@ -200,7 +200,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun12
+    - name: RobotBoyWalk12
       rect:
         serializedVersion: 2
         x: 1375
@@ -210,17 +210,17 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun13
+    - name: RobotBoyWalk13
       rect:
         serializedVersion: 2
-        x: 1650
+        x: 1652
         y: 1498
         width: 275
         height: 275
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun14
+    - name: RobotBoyWalk14
       rect:
         serializedVersion: 2
         x: 0
@@ -230,7 +230,7 @@ TextureImporter:
       alignment: 0
       pivot: {x: .5, y: .5}
       border: {x: 0, y: 0, z: 0, w: 0}
-    - name: RobotBoyRun15
+    - name: RobotBoyWalk15
       rect:
         serializedVersion: 2
         x: 275
