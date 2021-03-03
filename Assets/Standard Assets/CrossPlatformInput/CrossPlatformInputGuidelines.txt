@@ -1,0 +1,2 @@
+
+Importing the CrossPlatformInput package adds a menu item to Unity, "CrossPlatformInput", which allows you to enable or disable the CrossPlatformInput in the editor. You must enable the CrossPlatformInput in order to see the co
