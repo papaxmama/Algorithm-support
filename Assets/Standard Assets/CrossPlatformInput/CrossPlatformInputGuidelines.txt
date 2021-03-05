@@ -5,4 +5,4 @@ The CrossPlatformInput sample assets contains two main sections.
 
 1) The folder of prefabs provide a variety of ready-to-use "MobileControlRigs". Each control rig is suitable for a different purpose, and each implements the touch or tilt-based equivalent of some of the default standalone axes or buttons. These are ready to drop into your scene, and to use them you simply need to read the axes via the CrossPlatformInput class, rather than Unity's regular Input class.
 
-2) The set of scripts 
+2) The set of scripts provided are the scripts we used to put together the control rigs prefabs. They provide a simplified way of reading basic mobile input, such as tilt, taps and swipe gestures. They are designed so that various mobile controls can be read in the same way as regular Unity axes and buttons. You can use these scripts to build your own Mob
