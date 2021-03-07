@@ -11,4 +11,6 @@ The CrossPlatformInput sample assets contains two main sections.
 
 For example the Car control rig feeds the tilt input of the mobile device to the "Horizontal" axis, and has an accelerator and brake touch button which are fed as a pair into the "Vertical" axis. These are virtual equivalents of the real "Horizontal" and "Vertical" axes defined in Unity's Input Manager.
 
-Therefor
+Therefore when you read CrossPlatformInput.GetAxis("Horizontal"), you will either get the "real" input value - if your build target is non-mobile, or the value from the mobile control rig - if your build target is set to a mobile platform. 
+
+The CrossPlatformInput scripts and prefabs are provided together as 
