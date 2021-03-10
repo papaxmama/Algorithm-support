@@ -15,4 +15,6 @@ Therefore when you read CrossPlatformInput.GetAxis("Horizontal"), you will eithe
 
 The CrossPlatformInput scripts and prefabs are provided together as an example of how you can implement a cross-platform control solution in Unity. They also allow us to provide our other sample scenes in a form that can be published as standalone or to mobile targets with no modification.
 
-To use the CrossPlatformInput, you need to drop a "Mobile Control Rig" into
+To use the CrossPlatformInput, you need to drop a "Mobile Control Rig" into your scene (or create your own), and then make calls to CrossPlatformInput functions, referring to the axes and buttons that the Rig implements.
+
+When reading input from the CrossPlatformInput class, the values returned will be taken either from Unity's Input Manager settings, or from
