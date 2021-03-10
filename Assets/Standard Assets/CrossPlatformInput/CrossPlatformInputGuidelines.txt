@@ -13,4 +13,6 @@ For example the Car control rig feeds the tilt input of the mobile device to the
 
 Therefore when you read CrossPlatformInput.GetAxis("Horizontal"), you will either get the "real" input value - if your build target is non-mobile, or the value from the mobile control rig - if your build target is set to a mobile platform. 
 
-The CrossPlatformInput scripts and prefabs are provided together as 
+The CrossPlatformInput scripts and prefabs are provided together as an example of how you can implement a cross-platform control solution in Unity. They also allow us to provide our other sample scenes in a form that can be published as standalone or to mobile targets with no modification.
+
+To use the CrossPlatformInput, you need to drop a "Mobile Control Rig" into
