@@ -19,4 +19,11 @@ To use the CrossPlatformInput, you need to drop a "Mobile Control Rig" into your
 
 When reading input from the CrossPlatformInput class, the values returned will be taken either from Unity's Input Manager settings, or from the mobile-specific controls set up, depending on which build target you have selected.
 
-The CrossPlatformInput class is designed to be called instead of Unity's own Input class, and so mirrors certain parts of the Input API - specifically the functions relating to Axes and Butt
+The CrossPlatformInput class is designed to be called instead of Unity's own Input class, and so mirrors certain parts of the Input API - specifically the functions relating to Axes and Buttons:
+	GetAxis, GetAxisRaw
+	GetButton, GetButtonDown, GetButtonUp
+	
+Notes for coders:
+This package sets two compiler define symbols. One is always set automatically, the other is optionally set from a menu item.
+
+Importing the "CrossPlatformInput" package will automatically add a compiler define symbol, 
