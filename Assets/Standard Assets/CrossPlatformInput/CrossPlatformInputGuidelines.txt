@@ -26,4 +26,4 @@ The CrossPlatformInput class is designed to be called instead of Unity's own Inp
 Notes for coders:
 This package sets two compiler define symbols. One is always set automatically, the other is optionally set from a menu item.
 
-Importing the "CrossPlatformInput" package will automatically add a compiler define symbol, 
+Importing the "CrossPlatformInput" package will automatically add a compiler define symbol, "CROSS_PLATFORM_INPUT". This enables the CrossPlatformInput functions defined in some of the other Sample Asset packages (such as the Characters, Planes, etc). Without this symbol defined, those packages use Unity's regular Input class, which means they can be imported alone and still work with
