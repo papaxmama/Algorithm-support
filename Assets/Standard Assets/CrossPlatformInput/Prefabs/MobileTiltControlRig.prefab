@@ -134,4 +134,11 @@ MonoBehaviour:
 --- !u!1001 &100100000
 Prefab:
   m_ObjectHideFlags: 1
-  serial
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications: []
+    m_RemovedComponents: []
+  m_ParentPrefab: {fileID: 0}
+  m_RootGameObject: {fileID: 100000}
+  m_IsPrefabParent: 1
