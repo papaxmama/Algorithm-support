@@ -19,4 +19,18 @@ namespace UnityStandardAssets.CrossPlatformInput
         }
 
 
-        public void Set
+        public void SetUpState()
+        {
+            CrossPlatformInputManager.SetButtonUp(Name);
+        }
+
+
+        public void SetAxisPositiveState()
+        {
+            CrossPlatformInputManager.SetAxisPositive(Name);
+        }
+
+
+        public void SetAxisNeutralState()
+        {
+            CrossPlatformInputManager.
