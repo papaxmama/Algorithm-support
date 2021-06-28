@@ -35,4 +35,23 @@ namespace UnityStandardAssets.CrossPlatformInput
             m_StartPos = transform.position;
         }
 
-		void UpdateVirtualAxes(V
+		void UpdateVirtualAxes(Vector3 value)
+		{
+			var delta = m_StartPos - value;
+			delta.y = -delta.y;
+			delta /= MovementRange;
+			if (m_UseX)
+			{
+				m_HorizontalVirtualAxis.Update(-delta.x);
+			}
+
+			if (m_UseY)
+			{
+				m_VerticalVirtualAxis.Update(delta.y);
+			}
+		}
+
+		void CreateVirtualAxes()
+		{
+			// set axes to use
+			m_UseX = (a
