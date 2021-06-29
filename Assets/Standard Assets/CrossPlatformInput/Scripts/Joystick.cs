@@ -54,4 +54,10 @@ namespace UnityStandardAssets.CrossPlatformInput
 		void CreateVirtualAxes()
 		{
 			// set axes to use
-			m_UseX = (a
+			m_UseX = (axesToUse == AxisOption.Both || axesToUse == AxisOption.OnlyHorizontal);
+			m_UseY = (axesToUse == AxisOption.Both || axesToUse == AxisOption.OnlyVertical);
+
+			// create new axes based on axes to use
+			if (m_UseX)
+			{
+				m_HorizontalVirtualAxis = new CrossPlatformInputManager.VirtualAxis(horizonta
