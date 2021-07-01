@@ -71,4 +71,18 @@ namespace UnityStandardAssets.CrossPlatformInput
 		}
 
 
-		public void OnDrag(PointerEven
+		public void OnDrag(PointerEventData data)
+		{
+			Vector3 newPos = Vector3.zero;
+
+			if (m_UseX)
+			{
+				int delta = (int)(data.position.x - m_StartPos.x);
+				delta = Mathf.Clamp(delta, - MovementRange, MovementRange);
+				newPos.x = delta;
+			}
+
+			if (m_UseY)
+			{
+				int delta = (int)(data.position.y - m_StartPos.y);
+				delta = Mat
