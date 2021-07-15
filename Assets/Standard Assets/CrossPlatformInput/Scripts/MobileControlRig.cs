@@ -43,4 +43,13 @@ namespace UnityStandardAssets.CrossPlatformInput
 
 #if UNITY_EDITOR
 
-   
+        private void OnEnable()
+        {
+            EditorUserBuildSettings.activeBuildTargetChanged += Update;
+            EditorApplication.update += Update;
+        }
+
+
+        private void OnDisable()
+        {
+            EditorUserBuildSettings.activeBui
