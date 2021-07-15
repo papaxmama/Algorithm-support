@@ -32,4 +32,15 @@ namespace UnityStandardAssets.CrossPlatformInput
                 UnityEngine.EventSystems.EventSystem system = GameObject.FindObjectOfType<UnityEngine.EventSystems.EventSystem>();
 
                 if (system == null)
-                {//the
+                {//the scene have no event system, spawn one
+                    GameObject o = new GameObject("EventSystem");
+
+                    o.AddComponent<UnityEngine.EventSystems.EventSystem>();
+                    o.AddComponent<UnityEngine.EventSystems.StandaloneInputModule>();
+                }
+            }
+        }
+
+#if UNITY_EDITOR
+
+   
