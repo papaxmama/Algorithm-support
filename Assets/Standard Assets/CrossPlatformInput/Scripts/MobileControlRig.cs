@@ -52,4 +52,21 @@ namespace UnityStandardAssets.CrossPlatformInput
 
         private void OnDisable()
         {
-            EditorUserBuildSettings.activeBui
+            EditorUserBuildSettings.activeBuildTargetChanged -= Update;
+            EditorApplication.update -= Update;
+        }
+
+
+        private void Update()
+        {
+            CheckEnableControlRig();
+        }
+#endif
+
+
+        private void CheckEnableControlRig()
+        {
+#if MOBILE_INPUT
+		EnableControlRig(true);
+		#else
+            EnableControlRig(fal
