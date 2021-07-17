@@ -69,4 +69,17 @@ namespace UnityStandardAssets.CrossPlatformInput
 #if MOBILE_INPUT
 		EnableControlRig(true);
 		#else
-            EnableControlRig(fal
+            EnableControlRig(false);
+#endif
+        }
+
+
+        private void EnableControlRig(bool enabled)
+        {
+            foreach (Transform t in transform)
+            {
+                t.gameObject.SetActive(enabled);
+            }
+        }
+    }
+}
