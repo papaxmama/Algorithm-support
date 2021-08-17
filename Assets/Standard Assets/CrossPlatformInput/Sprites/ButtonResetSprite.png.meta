@@ -3,4 +3,18 @@ guid: a94c9a7eb94ceec4a8d67a1890e22e51
 TextureImporter:
   fileIDToRecycleName:
     21300000: ResetButton
-  serializedVersi
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFi
