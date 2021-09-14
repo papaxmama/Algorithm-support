@@ -1,3 +1,18 @@
 fileFormatVersion: 2
 guid: ea5873cfd9158664f89459f0c9e1d853
-TextureImpo
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: SliderBackground
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    ex
