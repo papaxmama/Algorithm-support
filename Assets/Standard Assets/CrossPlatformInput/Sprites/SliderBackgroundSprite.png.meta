@@ -44,4 +44,10 @@ TextureImporter:
   spriteBorder: {x: 31, y: 15, z: 31, w: 15}
   spritePixelsToUnits: 100
   alphaIsTransparency: 1
-  te
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
