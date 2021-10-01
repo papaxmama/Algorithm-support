@@ -1,2 +1,15 @@
 fileFormatVersion: 2
-guid: e
+guid: e4f1fee3de32377429fd1348fae62b10
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: JumpButton
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mi
