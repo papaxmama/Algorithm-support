@@ -10,4 +10,9 @@ namespace UnityStandardAssets.Utility
         // a trigger collider is entered.
         public enum Mode
         {
-            Trigger =
+            Trigger = 0,    // Just broadcast the action on to the target
+            Replace = 1,    // replace target with source
+            Activate = 2,   // Activate the target GameObject
+            Enable = 3,     // Enable a component
+            Animate = 4,    // Start animation on target
+            Deactivate = 
