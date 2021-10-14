@@ -21,4 +21,15 @@ namespace UnityStandardAssets.Utility
         public Mode action = Mode.Activate;         // The action to accomplish
         public Object target;                       // The game object to affect. If none, the trigger work on this game object
         public GameObject source;
- 
+        public int triggerCount = 1;
+        public bool repeatTrigger = false;
+
+
+        private void DoActivateTrigger()
+        {
+            triggerCount--;
+
+            if (triggerCount == 0 || repeatTrigger)
+            {
+                Object currentTarget = target ?? gameObject;
+           
