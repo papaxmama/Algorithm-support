@@ -37,4 +37,14 @@ namespace UnityStandardAssets.Utility
                 if (targetBehaviour != null)
                 {
                     targetGameObject = targetBehaviour.gameObject;
-       
+                }
+
+                switch (action)
+                {
+                    case Mode.Trigger:
+                        if (targetGameObject != null)
+                        {
+                            targetGameObject.BroadcastMessage("DoActivateTrigger");
+                        }
+                        break;
+                    cas
