@@ -47,4 +47,10 @@ namespace UnityStandardAssets.Utility
                             targetGameObject.BroadcastMessage("DoActivateTrigger");
                         }
                         break;
-                    cas
+                    case Mode.Replace:
+                        if (source != null)
+                        {
+                            if (targetGameObject != null)
+                            {
+                                Instantiate(source, targetGameObject.transform.position,
+                                        
