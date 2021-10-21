@@ -53,4 +53,12 @@ namespace UnityStandardAssets.Utility
                             if (targetGameObject != null)
                             {
                                 Instantiate(source, targetGameObject.transform.position,
-                                        
+                                            targetGameObject.transform.rotation);
+                                DestroyObject(targetGameObject);
+                            }
+                        }
+                        break;
+                    case Mode.Activate:
+                        if (targetGameObject != null)
+                        {
+          
