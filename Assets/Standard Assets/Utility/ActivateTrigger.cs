@@ -61,4 +61,12 @@ namespace UnityStandardAssets.Utility
                     case Mode.Activate:
                         if (targetGameObject != null)
                         {
-          
+                            targetGameObject.SetActive(true);
+                        }
+                        break;
+                    case Mode.Enable:
+                        if (targetBehaviour != null)
+                        {
+                            targetBehaviour.enabled = true;
+                        }
+                   
