@@ -50,4 +50,9 @@ public class AlphaButtonClickMask : MonoBehaviour, ICanvasRaycastFilter
         uv.x /= _image.sprite.texture.width;
         uv.y /= _image.sprite.texture.height;
 
-        //uv are inversed, as 0,0 or the rect transform seem
+        //uv are inversed, as 0,0 or the rect transform seem to be upper right, then going negativ toward lower left...
+        Color c = _image.sprite.texture.GetPixelBilinear(uv.x, uv.y);
+
+        return c.a> 0.1f;
+    }
+}
