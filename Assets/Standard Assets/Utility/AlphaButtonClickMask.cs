@@ -14,4 +14,18 @@ public class AlphaButtonClickMask : MonoBehaviour, ICanvasRaycastFilter
 
         bool isInvalid = false;
         if (tex != null)
-      
+        {
+            try
+            {
+                tex.GetPixels32();
+            }
+            catch (UnityException e)
+            {
+                Debug.LogError(e.Message);
+                isInvalid = true;
+            }
+        }
+        else
+        {
+            isInvalid = true;
+       
