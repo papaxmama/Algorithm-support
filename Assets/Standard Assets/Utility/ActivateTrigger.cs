@@ -76,4 +76,17 @@ namespace UnityStandardAssets.Utility
                             targetGameObject.GetComponent<Animation>().Play();
                         }
                         break;
-                    case Mode.Deactiv
+                    case Mode.Deactivate:
+                        if (targetGameObject != null)
+                        {
+                            targetGameObject.SetActive(false);
+                        }
+                        break;
+                }
+            }
+        }
+
+
+        private void OnTriggerEnter(Collider other)
+        {
+           
