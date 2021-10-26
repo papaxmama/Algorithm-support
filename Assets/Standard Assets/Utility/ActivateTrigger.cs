@@ -89,4 +89,7 @@ namespace UnityStandardAssets.Utility
 
         private void OnTriggerEnter(Collider other)
         {
-           
+            DoActivateTrigger();
+        }
+    }
+}
