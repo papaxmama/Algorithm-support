@@ -69,4 +69,11 @@ namespace UnityStandardAssets.Utility
                         {
                             targetBehaviour.enabled = true;
                         }
-                   
+                        break;
+                    case Mode.Animate:
+                        if (targetGameObject != null)
+                        {
+                            targetGameObject.GetComponent<Animation>().Play();
+                        }
+                        break;
+                    case Mode.Deactiv
