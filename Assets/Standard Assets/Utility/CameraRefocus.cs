@@ -29,4 +29,15 @@ namespace UnityStandardAssets.Utility
 
         public void ChangeParent(Transform parent)
         {
-            
+            Parent = parent;
+        }
+
+
+        public void GetFocusPoint()
+        {
+            RaycastHit hitInfo;
+            if (Physics.Raycast(Parent.transform.position + m_OrigCameraPos, Parent.transform.forward, out hitInfo,
+                                100f))
+            {
+                Lookatpoint = hitInfo.point;
+                m_Refocus =
