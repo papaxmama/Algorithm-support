@@ -15,4 +15,18 @@ namespace UnityStandardAssets.Utility
 
         public CameraRefocus(Camera camera, Transform parent, Vector3 origCameraPos)
         {
-          
+            m_OrigCameraPos = origCameraPos;
+            Camera = camera;
+            Parent = parent;
+        }
+
+
+        public void ChangeCamera(Camera camera)
+        {
+            Camera = camera;
+        }
+
+
+        public void ChangeParent(Transform parent)
+        {
+            
