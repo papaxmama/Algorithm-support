@@ -36,4 +36,6 @@ namespace UnityStandardAssets.Utility
         {
             public Vector3 value;
             public Space space = Space.Self;
-   
+        }
+    }
+}
