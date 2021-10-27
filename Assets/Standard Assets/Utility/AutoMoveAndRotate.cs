@@ -26,4 +26,14 @@ namespace UnityStandardAssets.Utility
                 deltaTime = (Time.realtimeSinceStartup - m_LastRealTime);
                 m_LastRealTime = Time.realtimeSinceStartup;
             }
-            transform.Translate(moveUnitsPerSecond.val
+            transform.Translate(moveUnitsPerSecond.value*deltaTime, moveUnitsPerSecond.space);
+            transform.Rotate(rotateDegreesPerSecond.value*deltaTime, moveUnitsPerSecond.space);
+        }
+
+
+        [Serializable]
+        public class Vector3andSpace
+        {
+            public Vector3 value;
+            public Space space = Space.Self;
+   
