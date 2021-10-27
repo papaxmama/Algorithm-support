@@ -105,3 +105,96 @@ namespace UnityStandardAssets.Utility.Inspector
 
             var items = property.FindPropertyRelative("items");
             var titles = new string[] {"Original", "Replacement", ""};
+            var props = new string[] {"original", "replacement", "-"};
+            var widths = new float[] {.45f, .45f, .1f};
+            const float lineHeight = 18;
+            bool changedLength = false;
+            if (items.arraySize > 0)
+            {
+                for (int i = -1; i < items.arraySize; ++i)
+                {
+                    var item = items.GetArrayElementAtIndex(i);
+
+                    float rowX = x;
+                    for (int n = 0; n < props.Length; ++n)
+                    {
+                        float w = widths[n]*inspectorWidth;
+
+                        // Calculate rects
+                        Rect rect = new Rect(rowX, y, w, lineHeight);
+                        rowX += w;
+
+                        if (i == -1)
+                        {
+                            // draw title labels
+                            EditorGUI.LabelField(rect, titles[n]);
+                        }
+                        else
+                        {
+                            if (props[n] == "-" || props[n] == "^" || props[n] == "v")
+                            {
+                                if (GUI.Button(rect, props[n]))
+                                {
+                                    switch (props[n])
+                                    {
+                                        case "-":
+                                            items.DeleteArrayElementAtIndex(i);
+                                            items.DeleteArrayElementAtIndex(i);
+                                            changedLength = true;
+                                            break;
+                                        case "v":
+                                            if (i > 0)
+                                            {
+                                                items.MoveArrayElement(i, i + 1);
+                                            }
+                                            break;
+                                        case "^":
+                                            if (i < items.arraySize - 1)
+                                            {
+                                                items.MoveArrayElement(i, i - 1);
+                                            }
+                                            break;
+                                    }
+                                }
+                            }
+                            else
+                            {
+                                SerializedProperty prop = item.FindPropertyRelative(props[n]);
+                                EditorGUI.PropertyField(rect, prop, GUIContent.none);
+                            }
+                        }
+                    }
+
+                    y += lineHeight + k_Spacing;
+                    if (changedLength)
+                    {
+                        break;
+                    }
+                }
+            }
+
+            // add button
+            var addButtonRect = new Rect((x + position.width) - widths[widths.Length - 1]*inspectorWidth, y,
+                                         widths[widths.Length - 1]*inspectorWidth, lineHeight);
+            if (GUI.Button(addButtonRect, "+"))
+            {
+                items.InsertArrayElementAtIndex(items.arraySize);
+            }
+
+            y += lineHeight + k_Spacing;
+
+            // Set indent back to what it was
+            EditorGUI.indentLevel = indent;
+            EditorGUI.EndProperty();
+        }
+
+
+        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+        {
+            SerializedProperty items = property.FindPropertyRelative("items");
+            float lineAndSpace = k_LineHeight + k_Spacing;
+            return 40 + (items.arraySize*lineAndSpace) + lineAndSpace;
+        }
+    }
+#endif
+}
