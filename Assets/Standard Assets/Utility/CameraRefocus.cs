@@ -40,4 +40,19 @@ namespace UnityStandardAssets.Utility
                                 100f))
             {
                 Lookatpoint = hitInfo.point;
-                m_Refocus =
+                m_Refocus = true;
+                return;
+            }
+            m_Refocus = false;
+        }
+
+
+        public void SetFocusPoint()
+        {
+            if (m_Refocus)
+            {
+                Camera.transform.LookAt(Lookatpoint);
+            }
+        }
+    }
+}
