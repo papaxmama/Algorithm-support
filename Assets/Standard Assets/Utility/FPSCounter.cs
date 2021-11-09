@@ -31,4 +31,8 @@ namespace UnityStandardAssets.Utility
                 m_CurrentFps = (int) (m_FpsAccumulator/fpsMeasurePeriod);
                 m_FpsAccumulator = 0;
                 m_FpsNextPeriod += fpsMeasurePeriod;
-                m_Text.text 
+                m_Text.text = string.Format(display, m_CurrentFps);
+            }
+        }
+    }
+}
