@@ -15,4 +15,14 @@ namespace UnityStandardAssets.Utility
         private Text m_Text;
 
 
-     
+        private void Start()
+        {
+            m_FpsNextPeriod = Time.realtimeSinceStartup + fpsMeasurePeriod;
+            m_Text = GetComponent<Text>();
+        }
+
+
+        private void Update()
+        {
+            // measure average frames per second
+            
