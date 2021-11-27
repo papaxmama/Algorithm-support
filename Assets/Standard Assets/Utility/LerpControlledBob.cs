@@ -17,4 +17,15 @@ namespace UnityStandardAssets.Utility
         public float Offset()
         {
             return m_Offset;
- 
+        }
+
+
+        public IEnumerator DoBobCycle()
+        {
+            // make the camera move down slightly
+            float t = 0f;
+            while (t < BobDuration)
+            {
+                m_Offset = Mathf.Lerp(0f, BobAmount, t/BobDuration);
+                t += Time.deltaTime;
+                yield return new W
