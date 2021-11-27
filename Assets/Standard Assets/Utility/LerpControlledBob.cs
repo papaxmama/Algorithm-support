@@ -28,4 +28,13 @@ namespace UnityStandardAssets.Utility
             {
                 m_Offset = Mathf.Lerp(0f, BobAmount, t/BobDuration);
                 t += Time.deltaTime;
-                yield return new W
+                yield return new WaitForFixedUpdate();
+            }
+
+            // make it move back to neutral
+            t = 0f;
+            while (t < BobDuration)
+            {
+                m_Offset = Mathf.Lerp(BobAmount, 0f, t/BobDuration);
+                t += Time.deltaTime;
+                yield retu
