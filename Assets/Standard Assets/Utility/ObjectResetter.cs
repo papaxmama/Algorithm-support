@@ -9,4 +9,13 @@ namespace UnityStandardAssets.Utility
     {
         private Vector3 originalPosition;
         private Quaternion originalRotation;
-        private List<Transform> originalStruc
+        private List<Transform> originalStructure;
+
+        private Rigidbody Rigidbody;
+
+        // Use this for initialization
+        private void Start()
+        {
+            originalStructure = new List<Transform>(GetComponentsInChildren<Transform>());
+            originalPosition = transform.position;
+           
