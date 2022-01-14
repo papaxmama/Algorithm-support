@@ -18,4 +18,17 @@ namespace UnityStandardAssets.Utility
         {
             originalStructure = new List<Transform>(GetComponentsInChildren<Transform>());
             originalPosition = transform.position;
-           
+            originalRotation = transform.rotation;
+
+            Rigidbody = GetComponent<Rigidbody>();
+        }
+
+
+        public void DelayedReset(float delay)
+        {
+            StartCoroutine(ResetCoroutine(delay));
+        }
+
+
+        public IEnumerator ResetCoroutine(float delay)
+  
