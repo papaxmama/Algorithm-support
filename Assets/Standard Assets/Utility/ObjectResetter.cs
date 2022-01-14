@@ -31,4 +31,12 @@ namespace UnityStandardAssets.Utility
 
 
         public IEnumerator ResetCoroutine(float delay)
-  
+        {
+            yield return new WaitForSeconds(delay);
+
+            // remove any gameobjects added (fire, skid trails, etc)
+            foreach (var t in GetComponentsInChildren<Transform>())
+            {
+                if (!originalStructure.Contains(t))
+                {
+                 
