@@ -39,4 +39,14 @@ namespace UnityStandardAssets.Utility
             {
                 if (!originalStructure.Contains(t))
                 {
-                 
+                    t.parent = null;
+                }
+            }
+
+            transform.position = originalPosition;
+            transform.rotation = originalRotation;
+            if (Rigidbody)
+            {
+                Rigidbody.velocity = Vector3.zero;
+                Rigidbody.angularVelocity = Vector3.zero;
+            
