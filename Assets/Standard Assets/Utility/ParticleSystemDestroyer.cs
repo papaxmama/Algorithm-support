@@ -30,4 +30,15 @@ namespace UnityStandardAssets.Utility
 
             // wait for random duration
 
-            float stopTime = Time.time + Random.Range(minDuration, ma
+            float stopTime = Time.time + Random.Range(minDuration, maxDuration);
+
+            while (Time.time < stopTime || m_EarlyStop)
+            {
+                yield return null;
+            }
+            Debug.Log("stopping " + name);
+
+            // turn off emission
+            foreach (var system in systems)
+            {
+                var emission = system.emiss
