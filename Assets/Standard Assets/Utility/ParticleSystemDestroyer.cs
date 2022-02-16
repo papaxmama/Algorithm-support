@@ -49,4 +49,14 @@ namespace UnityStandardAssets.Utility
             // wait for any remaining particles to expire
             yield return new WaitForSeconds(m_MaxLifetime);
 
-            Destroy(g
+            Destroy(gameObject);
+        }
+
+
+        public void Stop()
+        {
+            // stops the particle system early
+            m_EarlyStop = true;
+        }
+    }
+}
