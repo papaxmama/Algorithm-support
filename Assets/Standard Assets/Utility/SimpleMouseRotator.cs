@@ -38,4 +38,12 @@ namespace UnityStandardAssets.Utility
         private void Update()
         {
             // we make initial calculations from the original local rotation
-   
+            transform.localRotation = m_OriginalRotation;
+
+            // read input from mouse or mobile controls
+            float inputH;
+            float inputV;
+            if (relative)
+            {
+                inputH = CrossPlatformInputManager.GetAxis("Mouse X");
+                inputV = Cros
