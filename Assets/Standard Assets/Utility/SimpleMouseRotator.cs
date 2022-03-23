@@ -46,4 +46,11 @@ namespace UnityStandardAssets.Utility
             if (relative)
             {
                 inputH = CrossPlatformInputManager.GetAxis("Mouse X");
-                inputV = Cros
+                inputV = CrossPlatformInputManager.GetAxis("Mouse Y");
+
+                // wrap values to avoid springing quickly the wrong way from positive to negative
+                if (m_TargetAngles.y > 180)
+                {
+                    m_TargetAngles.y -= 360;
+                    m_FollowAngles.y -= 360;
+              
