@@ -16,4 +16,13 @@ namespace UnityStandardAssets.Utility
         // on a moving spaceship with a limited angular range)
         // to have no constraints on an axis, set the rotationRange to 360 or greater.
         public Vector2 rotationRange = new Vector3(70, 70);
-        public float rotationSpee
+        public float rotationSpeed = 10;
+        public float dampingTime = 0.2f;
+        public bool autoZeroVerticalOnMobile = true;
+        public bool autoZeroHorizontalOnMobile = false;
+        public bool relative = true;
+        
+        
+        private Vector3 m_TargetAngles;
+        private Vector3 m_FollowAngles;
+        
