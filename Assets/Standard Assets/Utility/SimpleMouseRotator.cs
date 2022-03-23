@@ -12,4 +12,8 @@ namespace UnityStandardAssets.Utility
         // Works in local coordinates, so if this object is parented
         // to another moving gameobject, its local constraints will
         // operate correctly
-        /
+        // (Think: looking out the side window of a car, or a gun turret
+        // on a moving spaceship with a limited angular range)
+        // to have no constraints on an axis, set the rotationRange to 360 or greater.
+        public Vector2 rotationRange = new Vector3(70, 70);
+        public float rotationSpee
