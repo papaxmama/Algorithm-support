@@ -25,4 +25,17 @@ namespace UnityStandardAssets.Utility
         
         private Vector3 m_TargetAngles;
         private Vector3 m_FollowAngles;
-        
+        private Vector3 m_FollowVelocity;
+        private Quaternion m_OriginalRotation;
+
+
+        private void Start()
+        {
+            m_OriginalRotation = transform.localRotation;
+        }
+
+
+        private void Update()
+        {
+            // we make initial calculations from the original local rotation
+   
