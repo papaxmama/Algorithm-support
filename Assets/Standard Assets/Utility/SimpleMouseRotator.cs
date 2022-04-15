@@ -63,4 +63,13 @@ namespace UnityStandardAssets.Utility
                 {
                     m_TargetAngles.y += 360;
                     m_FollowAngles.y += 360;
-             
+                }
+                if (m_TargetAngles.x < -180)
+                {
+                    m_TargetAngles.x += 360;
+                    m_FollowAngles.x += 360;
+                }
+
+#if MOBILE_INPUT
+            // on mobile, sometimes we want input mapped directly to tilt value,
+            // so it s
