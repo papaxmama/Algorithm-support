@@ -72,4 +72,11 @@ namespace UnityStandardAssets.Utility
 
 #if MOBILE_INPUT
             // on mobile, sometimes we want input mapped directly to tilt value,
-            // so it s
+            // so it springs back automatically when the look input is released.
+			if (autoZeroHorizontalOnMobile) {
+				m_TargetAngles.y = Mathf.Lerp (-rotationRange.y * 0.5f, rotationRange.y * 0.5f, inputH * .5f + .5f);
+			} else {
+				m_TargetAngles.y += inputH * rotationSpeed;
+			}
+			if (autoZeroVerticalOnMobile) {
+				m_TargetAngles.x = 
