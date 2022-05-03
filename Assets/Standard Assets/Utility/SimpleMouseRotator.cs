@@ -79,4 +79,11 @@ namespace UnityStandardAssets.Utility
 				m_TargetAngles.y += inputH * rotationSpeed;
 			}
 			if (autoZeroVerticalOnMobile) {
-				m_TargetAngles.x = 
+				m_TargetAngles.x = Mathf.Lerp (-rotationRange.x * 0.5f, rotationRange.x * 0.5f, inputV * .5f + .5f);
+			} else {
+				m_TargetAngles.x += inputV * rotationSpeed;
+			}
+#else
+                // with mouse input, we have direct control with no springback required.
+                m_TargetAngles.y += inputH*rotationSpeed;
+             
