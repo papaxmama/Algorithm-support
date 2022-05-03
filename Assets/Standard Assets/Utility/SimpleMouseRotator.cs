@@ -86,4 +86,9 @@ namespace UnityStandardAssets.Utility
 #else
                 // with mouse input, we have direct control with no springback required.
                 m_TargetAngles.y += inputH*rotationSpeed;
-             
+                m_TargetAngles.x += inputV*rotationSpeed;
+#endif
+
+                // clamp values to allowed range
+                m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, -rotationRange.y*0.5f, rotationRange.y*0.5f);
+                m_TargetAngles.x = Mathf.Clamp(m_TargetAngles.x, -rotationRange
