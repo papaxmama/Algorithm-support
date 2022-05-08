@@ -91,4 +91,12 @@ namespace UnityStandardAssets.Utility
 
                 // clamp values to allowed range
                 m_TargetAngles.y = Mathf.Clamp(m_TargetAngles.y, -rotationRange.y*0.5f, rotationRange.y*0.5f);
-                m_TargetAngles.x = Mathf.Clamp(m_TargetAngles.x, -rotationRange
+                m_TargetAngles.x = Mathf.Clamp(m_TargetAngles.x, -rotationRange.x*0.5f, rotationRange.x*0.5f);
+            }
+            else
+            {
+                inputH = Input.mousePosition.x;
+                inputV = Input.mousePosition.y;
+
+                // set values to allowed range
+                m_TargetAngles.y = Mathf.Lerp(-rotationRange.y*0.5f, rotationRange.y*0.5f
