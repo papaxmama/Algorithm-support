@@ -104,4 +104,10 @@ namespace UnityStandardAssets.Utility
             }
 
             // smoothly interpolate current values to target angles
-            m_FollowAngles = Vector3.SmoothDamp(m_FollowAngles, m_TargetAngles, ref m_FollowVel
+            m_FollowAngles = Vector3.SmoothDamp(m_FollowAngles, m_TargetAngles, ref m_FollowVelocity, dampingTime);
+
+            // update the actual gameobject's rotation
+            transform.localRotation = m_OriginalRotation*Quaternion.Euler(-m_FollowAngles.x, m_FollowAngles.y, 0);
+        }
+    }
+}
