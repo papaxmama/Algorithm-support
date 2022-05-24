@@ -128,3 +128,90 @@ namespace UnityStandardAssets.Utility.Inspector
                     var entry = entries.GetArrayElementAtIndex(i);
 
                     float rowX = x;
+
+                    // Calculate rects
+                    Rect actionRect = new Rect(rowX, y, actionWidth, k_LineHeight);
+                    rowX += actionWidth;
+
+                    Rect targetRect = new Rect(rowX, y, targetWidth, k_LineHeight);
+                    rowX += targetWidth;
+
+                    Rect delayRect = new Rect(rowX, y, delayWidth, k_LineHeight);
+                    rowX += delayWidth;
+
+                    Rect buttonRect = new Rect(rowX, y, buttonWidth, k_LineHeight);
+                    rowX += buttonWidth;
+
+                    // Draw fields - passs GUIContent.none to each so they are drawn without labels
+
+                    if (entry.FindPropertyRelative("action").enumValueIndex !=
+                        (int) TimedObjectActivator.Action.ReloadLevel)
+                    {
+                        EditorGUI.PropertyField(actionRect, entry.FindPropertyRelative("action"), GUIContent.none);
+                        EditorGUI.PropertyField(targetRect, entry.FindPropertyRelative("target"), GUIContent.none);
+                    }
+                    else
+                    {
+                        actionRect.width = actionRect.width + targetRect.width;
+                        EditorGUI.PropertyField(actionRect, entry.FindPropertyRelative("action"), GUIContent.none);
+                    }
+
+                    EditorGUI.PropertyField(delayRect, entry.FindPropertyRelative("delay"), GUIContent.none);
+                    if (GUI.Button(buttonRect, "-"))
+                    {
+                        entries.DeleteArrayElementAtIndex(i);
+                        break;
+                    }
+                }
+            }
+            
+            // add & sort buttons
+            y += k_LineHeight + k_Spacing;
+
+            var addButtonRect = new Rect(position.x + position.width - 120, y, 60, k_LineHeight);
+            if (GUI.Button(addButtonRect, "Add"))
+            {
+                entries.InsertArrayElementAtIndex(entries.arraySize);
+            }
+
+            var sortButtonRect = new Rect(position.x + position.width - 60, y, 60, k_LineHeight);
+            if (GUI.Button(sortButtonRect, "Sort"))
+            {
+                bool changed = true;
+                while (entries.arraySize > 1 && changed)
+                {
+                    changed = false;
+                    for (int i = 0; i < entries.arraySize - 1; ++i)
+                    {
+                        var e1 = entries.GetArrayElementAtIndex(i);
+                        var e2 = entries.GetArrayElementAtIndex(i + 1);
+
+                        if (e1.FindPropertyRelative("delay").floatValue > e2.FindPropertyRelative("delay").floatValue)
+                        {
+                            entries.MoveArrayElement(i + 1, i);
+                            changed = true;
+                            break;
+                        }
+                    }
+                }
+            }
+
+
+            // Set indent back to what it was
+            EditorGUI.indentLevel = indent;
+            //
+
+
+            EditorGUI.EndProperty();
+        }
+
+
+        public override float GetPropertyHeight(SerializedProperty property, GUIContent label)
+        {
+            SerializedProperty entries = property.FindPropertyRelative("entries");
+            float lineAndSpace = k_LineHeight + k_Spacing;
+            return 40 + (entries.arraySize*lineAndSpace) + lineAndSpace;
+        }
+    }
+#endif
+}
