@@ -26,4 +26,12 @@ namespace UnityStandardAssets.Utility
         // A multiplier adding distance ahead along the route for speed adjustments
 
         [SerializeField] private ProgressStyle progressStyle = ProgressStyle.SmoothAlongRoute;
-        // whether to update the position smoothly along the route (good for curved paths) or just when
+        // whether to update the position smoothly along the route (good for curved paths) or just when we reach each waypoint.
+
+        [SerializeField] private float pointToPointThreshold = 4;
+        // proximity to waypoint which must be reached to switch target to next waypoint : only used in PointToPoint mode.
+
+        public enum ProgressStyle
+        {
+            SmoothAlongRoute,
+            PointTo
