@@ -22,4 +22,8 @@ namespace UnityStandardAssets.Utility
         [SerializeField] private float lookAheadForSpeedOffset = 10;
         // The offset ahead only the route for speed adjustments (applied as the rotation of the waypoint target transform)
 
-        [SerializeField] private float lookAheadForSpeedFactor = .2
+        [SerializeField] private float lookAheadForSpeedFactor = .2f;
+        // A multiplier adding distance ahead along the route for speed adjustments
+
+        [SerializeField] private ProgressStyle progressStyle = ProgressStyle.SmoothAlongRoute;
+        // whether to update the position smoothly along the route (good for curved paths) or just when
