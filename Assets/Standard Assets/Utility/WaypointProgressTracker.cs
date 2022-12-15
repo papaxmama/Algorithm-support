@@ -34,4 +34,10 @@ namespace UnityStandardAssets.Utility
         public enum ProgressStyle
         {
             SmoothAlongRoute,
-            PointTo
+            PointToPoint,
+        }
+
+        // these are public, readable by other objects - i.e. for an AI to know where to head!
+        public WaypointCircuit.RoutePoint targetPoint { get; private set; }
+        public WaypointCircuit.RoutePoint speedPoint { get; private set; }
+        public WaypointCircuit.RoutePoint p
