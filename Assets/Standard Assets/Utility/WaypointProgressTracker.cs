@@ -40,4 +40,10 @@ namespace UnityStandardAssets.Utility
         // these are public, readable by other objects - i.e. for an AI to know where to head!
         public WaypointCircuit.RoutePoint targetPoint { get; private set; }
         public WaypointCircuit.RoutePoint speedPoint { get; private set; }
-        public WaypointCircuit.RoutePoint p
+        public WaypointCircuit.RoutePoint progressPoint { get; private set; }
+
+        public Transform target;
+
+        private float progressDistance; // The progress round the route, used in smooth mode.
+        private int progressNum; // the current waypoint number, used in point-to-point mode.
+        private Vector3 lastPosition; // Used to calculate cur
