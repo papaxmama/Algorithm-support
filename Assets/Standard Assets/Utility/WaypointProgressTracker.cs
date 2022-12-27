@@ -46,4 +46,10 @@ namespace UnityStandardAssets.Utility
 
         private float progressDistance; // The progress round the route, used in smooth mode.
         private int progressNum; // the current waypoint number, used in point-to-point mode.
-        private Vector3 lastPosition; // Used to calculate cur
+        private Vector3 lastPosition; // Used to calculate current speed (since we may not have a rigidbody component)
+        private float speed; // current speed of this object (calculated from delta since last frame)
+
+        // setup script properties
+        private void Start()
+        {
+            // we use a transform to represent the poin
