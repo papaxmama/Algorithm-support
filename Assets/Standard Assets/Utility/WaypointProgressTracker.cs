@@ -52,4 +52,9 @@ namespace UnityStandardAssets.Utility
         // setup script properties
         private void Start()
         {
-            // we use a transform to represent the poin
+            // we use a transform to represent the point to aim for, and the point which
+            // is considered for upcoming changes-of-speed. This allows this component
+            // to communicate this information to the AI without requiring further dependencies.
+
+            // You can manually create a transform and assign it to this component *and* the AI,
+      
