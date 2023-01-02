@@ -69,4 +69,12 @@ namespace UnityStandardAssets.Utility
 
         // reset the object to sensible values
         public void Reset()
- 
+        {
+            progressDistance = 0;
+            progressNum = 0;
+            if (progressStyle == ProgressStyle.PointToPoint)
+            {
+                target.position = circuit.Waypoints[progressNum].position;
+                target.rotation = circuit.Waypoints[progressNum].rotation;
+            }
+   
