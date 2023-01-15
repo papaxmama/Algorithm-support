@@ -77,4 +77,13 @@ namespace UnityStandardAssets.Utility
                 target.position = circuit.Waypoints[progressNum].position;
                 target.rotation = circuit.Waypoints[progressNum].rotation;
             }
-   
+        }
+
+
+        private void Update()
+        {
+            if (progressStyle == ProgressStyle.SmoothAlongRoute)
+            {
+                // determine the position we should currently be aiming for
+                // (this is different to the current progress position, it is a a certain amount ahead along the route)
+      
