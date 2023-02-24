@@ -103,4 +103,13 @@ namespace UnityStandardAssets.Utility
 
                 // get our current progress along the route
                 progressPoint = circuit.GetRoutePoint(progressDistance);
-                Vector3 progressDelta =
+                Vector3 progressDelta = progressPoint.position - transform.position;
+                if (Vector3.Dot(progressDelta, progressPoint.direction) < 0)
+                {
+                    progressDistance += progressDelta.magnitude*0.5f;
+                }
+
+                lastPosition = transform.position;
+            }
+            else
+         
