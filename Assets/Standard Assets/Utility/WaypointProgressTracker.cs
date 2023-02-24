@@ -97,4 +97,10 @@ namespace UnityStandardAssets.Utility
                            .position;
                 target.rotation =
                     Quaternion.LookRotation(
-                        circuit.GetRoutePoi
+                        circuit.GetRoutePoint(progressDistance + lookAheadForSpeedOffset + lookAheadForSpeedFactor*speed)
+                               .direction);
+
+
+                // get our current progress along the route
+                progressPoint = circuit.GetRoutePoint(progressDistance);
+                Vector3 progressDelta =
