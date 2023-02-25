@@ -112,4 +112,10 @@ namespace UnityStandardAssets.Utility
                 lastPosition = transform.position;
             }
             else
-         
+            {
+                // point to point mode. Just increase the waypoint if we're close enough:
+
+                Vector3 targetDelta = target.position - transform.position;
+                if (targetDelta.magnitude < pointToPointThreshold)
+                {
+                    progressNum = (progressNum + 1)%circuit.Waypoints.L
