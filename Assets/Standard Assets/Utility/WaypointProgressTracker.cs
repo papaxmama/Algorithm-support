@@ -118,4 +118,12 @@ namespace UnityStandardAssets.Utility
                 Vector3 targetDelta = target.position - transform.position;
                 if (targetDelta.magnitude < pointToPointThreshold)
                 {
-                    progressNum = (progressNum + 1)%circuit.Waypoints.L
+                    progressNum = (progressNum + 1)%circuit.Waypoints.Length;
+                }
+
+
+                target.position = circuit.Waypoints[progressNum].position;
+                target.rotation = circuit.Waypoints[progressNum].rotation;
+
+                // get our current progress along the route
+                progressPoint = circuit.GetRoutePoint(progressDista
