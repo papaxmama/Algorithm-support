@@ -126,4 +126,11 @@ namespace UnityStandardAssets.Utility
                 target.rotation = circuit.Waypoints[progressNum].rotation;
 
                 // get our current progress along the route
-                progressPoint = circuit.GetRoutePoint(progressDista
+                progressPoint = circuit.GetRoutePoint(progressDistance);
+                Vector3 progressDelta = progressPoint.position - transform.position;
+                if (Vector3.Dot(progressDelta, progressPoint.direction) < 0)
+                {
+                    progressDistance += progressDelta.magnitude;
+                }
+                lastPosition = transform.position;
+  
