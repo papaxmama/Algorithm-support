@@ -133,4 +133,14 @@ namespace UnityStandardAssets.Utility
                     progressDistance += progressDelta.magnitude;
                 }
                 lastPosition = transform.position;
-  
+            }
+        }
+
+
+        private void OnDrawGizmos()
+        {
+            if (Application.isPlaying)
+            {
+                Gizmos.color = Color.green;
+                Gizmos.DrawLine(transform.position, target.position);
+                Gizmos.DrawWireSphere(circuit.GetRoutePosition(progres
